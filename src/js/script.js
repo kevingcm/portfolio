@@ -124,7 +124,7 @@ function updateGreeting() {
 
     const fav = document.getElementById('favicon');
     if (fav) {
-      fav.href = t === 'light' ? '/assets/favicon-light-mode.svg' : '/assets/favicon-dark-mode.svg';
+      fav.href = t === 'light' ? 'assets/favicon-light-mode.svg' : 'assets/favicon-dark-mode.svg';
     }
   }
 })();
