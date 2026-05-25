@@ -1,0 +1,16 @@
+[
+  { "name": "Flutter",  "icon": "flutter/flutter-original.svg",   "featured": true },
+  { "name": "Dart",     "icon": "dart/dart-original.svg",         "featured": true },
+  { "name": "Python",   "icon": "python/python-original.svg",     "featured": false },
+  { "name": "HTML5",    "icon": "html5/html5-original.svg",       "featured": false },
+  { "name": "CSS3",     "icon": "css3/css3-original.svg",         "featured": false },
+  { "name": "JavaScript", "icon": "javascript/javascript-original.svg", "featured": false },
+  { "name": "GitHub",   "icon": "github/github-original.svg",     "featured": false },
+  { "name": "PostgreSQL", "icon": "postgresql/postgresql-original.svg", "featured": false },
+  { "name": "VS Code",    "icon": "vscode/vscode-original.svg",         "featured": false },
+  { "name": "Figma",      "icon": "figma/figma-original.svg",           "featured": false },
+  { "name": "Git",        "icon": "git/git-original.svg",               "featured": false },
+  { "name": "GitLab",     "icon": "gitlab/gitlab-original.svg",         "featured": false },
+  { "name": "Kotlin",     "icon": "kotlin/kotlin-original.svg",         "featured": false },
+  { "name": "Swift",      "icon": "swift/swift-original.svg",           "featured": false }
+]

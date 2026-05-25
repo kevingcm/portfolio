@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.handle }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Jersey+25&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="/assets/favicon-dark-mode.svg" />
+  </head>
+  <body>
+    <div id="loader-wrapper">
+      <div class="loader-circle"></div>
+    </div>
+    <div id="cursor-glow"></div>
+    <div id="cursor"></div>
+    <canvas id="stars"></canvas>
+
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="#home" class="nav-logo">{{ site.handle }}</a>
+        <nav class="nav-links">
+          <a href="#about"      data-section="about"      data-i18n="nav.about">About</a>
+          <a href="#education"  data-section="education"  data-i18n="nav.education">Education</a>
+          <a href="#experience" data-section="experience" data-i18n="nav.experience">Experience</a>
+          <a href="#stack"      data-section="stack"      data-i18n="nav.stack">Stack</a>
+          <a href="#projects"   data-section="projects"   data-i18n="nav.projects">Projects</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="lang-toggle" aria-label="Toggle language">EN</button>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo">{{ site.handle }}</a>
+          <nav class="footer-links">
+            <a href="#about"      data-i18n="nav.about">About</a>
+            <a href="#education"  data-i18n="nav.education">Education</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#stack"      data-i18n="nav.stack">Stack</a>
+            <a href="#projects"   data-i18n="nav.projects">Projects</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>{{ site.handle }} © 2026</span>
+          <span class="footer-sep">·</span>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <span class="footer-sep">·</span>
+          <span>Built with Eleventy</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

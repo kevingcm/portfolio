@@ -1,0 +1,21 @@
+{
+  "name": "Kevin Gabriel",
+  "handle": "kevingcm",
+  "title": "Developer",
+  "status": "Available for hire",
+  "status_pt": "Disponível para contratação",
+  "bio": "I'm a mobile developer based in São Paulo building cross-platform apps and clean interfaces with Flutter and Dart.",
+  "bio_pt": "sou desenvolvedor mobile em São Paulo criando apps multiplataforma e interfaces limpas com Flutter e Dart.",
+  "about": [
+    "I'm a mobile developer who loves building full-stack apps from scratch, especially when I can combine my passion for coding with real-life activities. I specialize in crafting clean, high-performance Flutter apps.",
+    "For me, software is about solving real problems. I'd rather spend hours polishing a seamless user flow and securing a database than shipping half-baked features nobody actually uses."
+  ],
+  "about_pt": [
+    "Sou um desenvolvedor mobile que adora criar aplicativos full-stack do zero, especialmente quando posso unir minha paixão por programação com atividades da vida real. Sou especialista em criar aplicativos Flutter limpos e de alta performance.",
+    "Para mim, software serve para resolver problemas reais. Prefiro passar horas polindo um fluxo de usuário intuitivo e assegurando a segurança de um banco de dados do que entregar funcionalidades inacabadas que ninguém vai usar."
+  ],
+  "email": "kevingcm.dev@gmail.com",
+  "github": "https://github.com/kevingcm",
+  "linkedin": "https://linkedin.com/in/kevingcm",
+  "behance": ""
+}

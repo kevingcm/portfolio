@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Kmon! Climb Club",
+    "url": "kmonclimb.com",
+    "status": "Mobile",
+    "icon": "/assets/kmon.png",
+    "description": "Full-stack climbing discovery app for Android and iOS. Outdoor crags and indoor gyms, social check-ins, route rankings, user-curated lists, and a real-time activity feed, built with Flutter and Supabase.",
+    "description_pt": "App completo de descoberta de escalada para Android e iOS. Vias outdoor e academias indoor, check-ins sociais, rankings de rotas, listas curadas e feed de atividades em tempo real, desenvolvido com Flutter e Supabase.",
+    "tags": ["Flutter", "Dart", "Supabase", "PostgreSQL"]
+  },
+  {
+    "name": "RecipeSZ, Recipe App",
+    "url": "github.com/kevingcm/recipeSZ",
+    "status": "Mobile",
+    "icon": "/assets/recipesz.png",
+    "description": "Cross-platform recipe discovery app with favorites, cloud-synced shopping lists, pantry matching, community reviews with photos, and multi-account support, built with Flutter and Firebase.",
+    "description_pt": "App multiplataforma de receitas com favoritos, listas de compras sincronizadas, correspondência de despensa, avaliações com fotos e suporte a múltiplas contas, desenvolvido com Flutter e Firebase.",
+    "tags": ["Flutter", "Dart", "Firebase", "Riverpod"]
+  },
+  {
+    "name": "DiaryApp, Personal Journal",
+    "url": "github.com/kevingcm/diaryApp",
+    "status": "Mobile",
+    "icon": "",
+    "description": "A minimal, privacy-focused diary and mood tracker for Android and iOS. Local-first encrypted storage, rich text entry, mood tags, and daily reminders, built with Flutter.",
+    "description_pt": "Um diário e rastreador de humor minimalista e focado em privacidade para Android e iOS. Armazenamento criptografado local-first, formatação de texto, tags de humor e lembretes diários, desenvolvido com Flutter.",
+    "tags": ["Flutter", "Dart", "Local-first", "UI"]
+  },
+  {
+    "name": "Dadoos, Dice Roller",
+    "url": "github.com/kevingcm/dadoos",
+    "status": "Mobile",
+    "icon": "/assets/dadoos.png",
+    "description": "A playful, multi-platform dice rolling app. Features roll animations, custom Material themes with soft pink palettes, and responsive layouts built with Flutter.",
+    "description_pt": "Um aplicativo divertido e multiplataforma de rolagem de dados. Apresenta animações de rolagem, temas Material customizados com paletas rosa e layouts responsivos desenvolvidos com Flutter.",
+    "tags": ["Flutter", "Dart", "Animation", "UI"]
+  },
+  {
+    "name": "Calculadora, Calculator App",
+    "url": "github.com/kevingcm/calculator",
+    "status": "Mobile",
+    "icon": "",
+    "description": "A clean, responsive basic calculator built with Flutter. Built with local state management and custom components to handle basic arithmetic, clear/delete, and decimal operations.",
+    "description_pt": "Uma calculadora simples e responsiva construída com Flutter. Desenvolvida com gerenciamento de estado local e componentes customizados para lidar com operações básicas de aritmética e decimais.",
+    "tags": ["Flutter", "Dart", "UI", "Math"]
+  },
+  {
+    "name": "Shortly, URL Shortener",
+    "url": "github.com/kevingcm/urlShortener",
+    "status": "Web",
+    "icon": "/assets/shortly.png",
+    "description": "URL shortener with per-link click analytics. One Flutter codebase targeting web and Android, backed by a Node.js + PostgreSQL API with timestamp, referrer, and user-agent tracking.",
+    "description_pt": "Encurtador de URLs com analytics de cliques por link. Um único código Flutter para web e Android, com API Node.js + PostgreSQL rastreando timestamp, referrer e user-agent.",
+    "tags": ["Flutter", "Node.js", "PostgreSQL", "Dart"]
+  }
+]

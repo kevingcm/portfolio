@@ -1,0 +1,19 @@
+[
+  {
+    "degree": "Técnico em Informática",
+    "degree_en": "IT Technician",
+    "institution": "Instituto Federal de Rondônia",
+    "location": "Porto Velho, Brasil",
+    "date": "2021 - 2023",
+    "subtitle": "",
+    "honors": "",
+    "coursework": [
+      { "en": "HTML & CSS",                   "pt": "HTML & CSS" },
+      { "en": "Python",                        "pt": "Python" },
+      { "en": "JavaScript",                    "pt": "JavaScript" },
+      { "en": "Git & GitHub",                  "pt": "Git & GitHub" },
+      { "en": "Object-Oriented Programming",   "pt": "Programação Orientada a Objetos" },
+      { "en": "Relational Databases & SQL",    "pt": "Banco de Dados Relacional & SQL" }
+    ]
+  }
+]

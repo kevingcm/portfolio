@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Kmon! Climb Club, App de Escalada",
+    "title_en": "Kmon! Climb Club, Climbing App",
+    "company": "Self Project",
+    "dates": "Abr 2026 - Presente",
+    "dates_en": "Apr 2026 - Present",
+    "achievements": [
+      {
+        "name": "Arquitetura full-stack",
+        "name_en": "Full-Stack Architecture",
+        "description": "Projetei e desenvolvi do zero um app completo com Flutter + Supabase, gerenciando mais de 50 migrações de banco de dados e definindo toda a arquitetura de dados incluindo esquemas paralelos para escaladas outdoor e academias indoor.",
+        "description_en": "Designed and built a full production app from scratch with Flutter + Supabase, managing 50+ database migrations and defining the entire data architecture including parallel schemas for outdoor climbs and indoor gyms."
+      },
+      {
+        "name": "Backend & segurança",
+        "name_en": "Backend & Security",
+        "description": "Implementei Row-Level Security (RLS) completo no PostgreSQL, políticas de acesso por tabela, controle de privacidade em três níveis (público/seguidores/privado) e upload de mídia autenticado via Supabase Storage.",
+        "description_en": "Implemented full Row-Level Security (RLS) in PostgreSQL, per-table access policies, three-level privacy control (public/followers/private), and authenticated media upload via Supabase Storage."
+      },
+      {
+        "name": "Funcionalidades sociais",
+        "name_en": "Social Features",
+        "description": "Construí um grafo social completo, seguir/seguidores, feed de atividades de usuários seguidos, check-ins com fotos e notas, curtidas e comentários em visitas, e perfis públicos com contagem de seguidores.",
+        "description_en": "Built a full social graph, follows/followers, activity feed from followed users, check-ins with photos and notes, likes and comments on visits, and public profiles with follower counts."
+      },
+      {
+        "name": "Busca & descoberta",
+        "name_en": "Search & Discovery",
+        "description": "Desenvolvi busca com debounce de 250ms, filtros combinados (dificuldade, distância, avaliação), ordenação dinâmica e integração com Google Maps exibindo pins de locais próximos via GPS do dispositivo.",
+        "description_en": "Built search with 250ms debounce, combined filters (difficulty, distance, rating), dynamic sorting, and Google Maps integration displaying nearby location pins using the device's GPS."
+      },
+      {
+        "name": "Rankings & gamificação (em desenvolvimento)",
+        "name_en": "Rankings & Gamification (in progress)",
+        "description": "Em desenvolvimento: catálogo de rotas de ginásio com sistema de verificação por votos (3 votos para confirmar + override de staff), rankings por período (mensal/anual/todos os tempos) e grupos de competição com placar.",
+        "description_en": "In progress: gym route catalog with a vote-based send verification system (3 votes to confirm + staff override), time-scoped rankings (monthly/yearly/all-time), and competition groups with leaderboards."
+      },
+      {
+        "name": "UI/UX Engineering",
+        "name_en": "UI/UX Engineering",
+        "description": "Implementei tema Material 3 com dark mode e seletor de cor de destaque, carrossel de imagens com parallax, estado otimista com reversão em erro, bottom sheets para ações transientes e sistema de listas curadas pelo usuário.",
+        "description_en": "Implemented Material 3 theming with dark mode and accent color picker, parallax image carousels, optimistic state with error reversal, modal bottom sheets for transient actions, and user-curated lists with three privacy tiers."
+      }
+    ]
+  },
+  {
+    "title": "RecipeSZ, App de Receitas",
+    "title_en": "RecipeSZ, Recipe App",
+    "company": "Self Project",
+    "dates": "Mar 2026 - Mai 2026",
+    "dates_en": "Mar 2026 - May 2026",
+    "achievements": [
+      {
+        "name": "App multiplataforma",
+        "name_en": "Cross-Platform App",
+        "description": "Desenvolvi um app completo de receitas com Flutter, rodando em Android, iOS e Web a partir de um único código, com roteamento via go_router e gerenciamento de estado com Riverpod.",
+        "description_en": "Built a full recipe app with Flutter running on Android, iOS, and Web from a single codebase, with go_router for navigation and Riverpod for state management."
+      },
+      {
+        "name": "Integração Firebase",
+        "name_en": "Firebase Integration",
+        "description": "Implementei autenticação com Google Sign-In, banco de dados em Cloud Firestore com isolamento de dados por conta, upload de imagens via Cloudinary, e monitoramento com Analytics e Crashlytics.",
+        "description_en": "Implemented Google Sign-In auth, Cloud Firestore with per-account data isolation, image uploads via Cloudinary, and monitoring with Firebase Analytics and Crashlytics."
+      },
+      {
+        "name": "Funcionalidades sociais",
+        "name_en": "Social Features",
+        "description": "Construí avaliações com fotos, sistema de moderação com fila de admin, notificações in-app, perfis de usuário com avatar customizável e troca de múltiplas contas.",
+        "description_en": "Built photo reviews, an admin moderation queue, in-app notifications, user profiles with customizable avatars, and seamless multi-account switching."
+      }
+    ]
+  },
+  {
+    "title": "Monitor de Programação Orientada a Objetos",
+    "title_en": "OOP Teaching Assistant",
+    "company": "Instituto Federal de Rondônia",
+    "dates": "Mar 2023 - Out 2023",
+    "dates_en": "Mar 2023 - Oct 2023",
+    "achievements": [
+      {
+        "name": "Suporte a alunos",
+        "name_en": "Student Support",
+        "description": "Auxiliei alunos com conceitos e exercícios de programação em Python, esclarecendo dúvidas e reforçando a base teórica da disciplina.",
+        "description_en": "Assisted students with Python programming concepts and exercises, answering questions and reinforcing the course's theoretical foundation."
+      },
+      {
+        "name": "Sessões de reforço",
+        "name_en": "Reinforcement Sessions",
+        "description": "Realizei sessões de reforço focadas na resolução de exercícios e no desenvolvimento de lógica de programação.",
+        "description_en": "Led reinforcement sessions focused on exercise solving and programming logic development."
+      },
+      {
+        "name": "Apoio ao professor",
+        "name_en": "Teacher Support",
+        "description": "Apoiei o professor na revisão de atividades e trabalhos, contribuindo para a padronização e qualidade das avaliações.",
+        "description_en": "Supported the teacher in reviewing assignments and projects, contributing to standardization and assessment quality."
+      }
+    ]
+  }
+]

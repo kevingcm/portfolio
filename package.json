@@ -1,0 +1,13 @@
+{
+  "name": "kevingcm",
+  "version": "1.0.0",
+  "description": "Kevin's portfolio site",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
