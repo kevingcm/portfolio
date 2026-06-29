@@ -1,7 +1,7 @@
 [
   {
-    "name": "Kmon! Climb Club",
-    "url": "kmonclimb.com",
+    "name": "Kmon! Climb Club de Escalada",
+    "url": "play.google.com/store/apps/details?id=kmon.climb",
     "status": "Mobile",
     "icon": "assets/kmon.png",
     "description": "Full-stack climbing discovery app for Android and iOS. Outdoor crags and indoor gyms, social check-ins, route rankings, user-curated lists, and a real-time activity feed, built with Flutter and Supabase.",
