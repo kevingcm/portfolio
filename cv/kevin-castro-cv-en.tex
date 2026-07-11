@@ -1,0 +1,115 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm} % Page margins
+\setcounter{secnumdepth}{0}                                 % Remove section numbering
+\setlist[itemize]{
+    leftmargin=0.75em, % List indent (closer to page margin)
+    itemsep=0.2em,     % Space between items
+    topsep=0.25em,     % Space before/after list
+    parsep=0em,        % Space between paragraphs in the same item
+    partopsep=0em      % Extra space when starting the list
+}
+
+\pagestyle{empty}
+
+\hypersetup{
+    pdftitle={CV Kevin Castro},      % PDF title
+    pdfauthor={Kevin Castro},        % PDF author
+    colorlinks=true,          % Use color on links (no box)
+    linkcolor=black,          % Internal link color
+    urlcolor=black,           % URL color
+    citecolor=black,          % Citation color
+    bookmarksdepth=2          % Sidebar: section and subsection
+}
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}
+[\titlerule\vspace{0.5ex}]
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+\titlespacing*{\subsection}{0pt}{0.35em}{0.15em}
+
+\newcounter{cventry}
+\newcommand{\cventry}[4]{%
+    \refstepcounter{cventry}%
+    \phantomsection%
+    \pdfbookmark[2]{#1}{cventry-\thecventry}%
+    \noindent\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Kevin Castro}}
+    \\ [0.1cm]
+    {\normalsize Mobile Developer}
+    \\ [0.1cm]
+    São Paulo, Brazil
+    {\textbullet}
+    \href{mailto:kevingcm.dev@gmail.com}{kevingcm.dev@gmail.com}
+    {\textbullet}
+    \href{https://linkedin.com/in/kevingcm}{linkedin.com/in/kevingcm}
+    {\textbullet}
+    \href{https://github.com/kevingcm}{github.com/kevingcm}
+\end{center}
+
+\section{Technical Skills}
+    \begin{itemize}
+        \item \textbf{Languages:} Portuguese (Native), English (C1)
+        \item \textbf{Soft Skills:} Teamwork, Problem-solving, Attention to detail, Fast learner, Time management, Communication
+        \item \textbf{Programming Languages:} Dart, Python, JavaScript, HTML, CSS, Kotlin, Swift
+        \item \textbf{Frameworks:} Flutter
+        \item \textbf{Tools:} Git, GitHub, PostgreSQL, Visual Studio Code, Figma
+    \end{itemize}
+
+\section{Education}
+    \cventry{Instituto Federal de Rondônia}{Porto Velho, Brazil}{IT Technician}{2021 - 2023}
+    \begin{itemize}
+        \item \textbf{Relevant coursework:} HTML \& CSS, Python, JavaScript, Git \& GitHub, Object-Oriented Programming, Relational Databases \& SQL
+    \end{itemize}
+
+\section{Experience}
+    \cventry{Kmon! Climb Club, Climbing App}{Self Project}{Full-Stack Architecture \& Product}{Apr 2026 - Present}
+    \begin{itemize}
+        \item Designed and built a full production app from scratch with Flutter + Supabase, managing 50+ database migrations and defining the entire data architecture.
+        \item Implemented full Row-Level Security (RLS) in PostgreSQL, per-table access policies, and three-level privacy control.
+        \item Built a full social graph with follows/followers, an activity feed, photo check-ins, and likes/comments.
+        \item Built search with 250ms debounce, combined filters, and Google Maps integration displaying nearby locations via GPS.
+    \end{itemize}
+
+    \cventry{Instituto Federal de Rondônia}{Porto Velho, Brazil}{OOP Teaching Assistant}{Mar 2023 - Oct 2023}
+    \begin{itemize}
+        \item Provided daily online support to students on Python programming concepts and exercises, 7 days a week.
+        \item Led in-person reinforcement sessions twice a week focused on exercise solving and programming logic development.
+        \item Supported the teacher in reviewing assignments and projects, contributing to assessment quality.
+    \end{itemize}
+
+\end{document}

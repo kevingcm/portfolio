@@ -43,10 +43,26 @@ layout: base.njk
 
 {# ── ABOUT ── #}
 <section id="about" class="section">
-  <h2 class="section-title" data-i18n="section.about">About</h2>
+  <div class="section-header">
+    <h2 class="section-title" data-i18n="section.about">About</h2>
+    <a
+      id="cv-download"
+      class="btn-download"
+      href="assets/pdf/kevin-castro-cv-en.pdf"
+      download="Kevin-Castro-CV-EN.pdf"
+      data-href-en="assets/pdf/kevin-castro-cv-en.pdf"
+      data-href-pt="assets/pdf/kevin-castro-cv-pt.pdf"
+      data-download-en="Kevin-Castro-CV-EN.pdf"
+      data-download-pt="Kevin-Castro-CV-PT.pdf"
+    >
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 21h14"/></svg>
+      <span data-i18n="cv.download">Download CV</span>
+    </a>
+  </div>
   {% for para in site.about %}
-  <p class="body-text" data-en="{{ para }}" data-pt="{{ site.about_pt[loop.index0] }}">{{ para }}</p>
+  <p class="body-text{% if not loop.first %} about-extra{% endif %}" data-en="{{ para }}" data-pt="{{ site.about_pt[loop.index0] }}">{{ para }}</p>
   {% endfor %}
+  <button type="button" class="about-toggle" data-i18n="about.readMore">Read more</button>
 </section>
 
 {# ── EDUCATION ── #}

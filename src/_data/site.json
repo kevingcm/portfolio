@@ -1,5 +1,5 @@
 {
-  "name": "Kevin Gabriel",
+  "name": "Kevin Castro",
   "handle": "kevingcm",
   "title": "Developer",
   "status": "Available for hire",
@@ -7,12 +7,12 @@
   "bio": "I'm a mobile developer based in São Paulo building cross-platform apps and clean interfaces with Flutter and Dart.",
   "bio_pt": "sou desenvolvedor mobile em São Paulo criando apps multiplataforma e interfaces limpas com Flutter e Dart.",
   "about": [
-    "I'm a mobile developer who loves building full-stack apps from scratch, especially when I can combine my passion for coding with real-life activities. I specialize in crafting clean, high-performance Flutter apps.",
-    "For me, software is about solving real problems. I'd rather spend hours polishing a seamless user flow and securing a database than shipping half-baked features nobody actually uses."
+    "I'm a mobile developer, and Flutter is where I feel most at home. There's something satisfying about shipping one codebase that runs everywhere without cutting corners on how it feels to use. I like building things end-to-end: architecting the data model, wiring up the backend, then spending real time on the small interactions most people won't consciously notice but will definitely feel if they're missing.",
+    "Outside of code, I spend most of my free time on music, film, and books. I think all three feed into how I build too, especially when it comes to pacing and knowing when to cut something that isn't working. I'm not big on chasing trends for their own sake. I'd rather spend time on things that actually hold up, in code and outside of it."
   ],
   "about_pt": [
-    "Sou um desenvolvedor mobile que adora criar aplicativos full-stack do zero, especialmente quando posso unir minha paixão por programação com atividades da vida real. Sou especialista em criar aplicativos Flutter limpos e de alta performance.",
-    "Para mim, software serve para resolver problemas reais. Prefiro passar horas polindo um fluxo de usuário intuitivo e assegurando a segurança de um banco de dados do que entregar funcionalidades inacabadas que ninguém vai usar."
+    "Sou desenvolvedor mobile, e Flutter é onde me sinto mais à vontade. Tem algo satisfatório em lançar um único código que roda em todas as plataformas, sem abrir mão de como ele se sente no uso. Gosto de construir as coisas de ponta a ponta: arquitetar o modelo de dados, montar o backend e depois dedicar tempo de verdade aos pequenos detalhes que a maioria nem percebe conscientemente, mas sente na hora se estiverem faltando.",
+    "Fora do código, boa parte do meu tempo livre vai para música, cinema e livros. Acho que os três também influenciam como eu construo, principalmente na hora de pensar ritmo e saber quando cortar algo que não está funcionando. Não sou muito de seguir tendência só por seguir. Prefiro dedicar tempo ao que realmente se sustenta, no código e fora dele."
   ],
   "email": "kevingcm.dev@gmail.com",
   "github": "https://github.com/kevingcm",

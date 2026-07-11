@@ -12,6 +12,9 @@ const TRANSLATIONS = {
     'section.stack':      'Tech Stack',
     'section.projects':   'Projects',
     'label.coursework':   'Relevant Coursework',
+    'cv.download':        'Download CV',
+    'about.readMore':     'Read more',
+    'about.showLess':     'Show less',
     'greeting.morning':   'Good morning,',
     'greeting.afternoon': 'Good afternoon,',
     'greeting.evening':   'Good evening,',
@@ -28,6 +31,9 @@ const TRANSLATIONS = {
     'section.stack':      'Tech Stack',
     'section.projects':   'Projetos',
     'label.coursework':   'Disciplinas Relevantes',
+    'cv.download':        'Baixar Currículo',
+    'about.readMore':     'Ler mais',
+    'about.showLess':     'Mostrar menos',
     'greeting.morning':   'Bom dia,',
     'greeting.afternoon': 'Boa tarde,',
     'greeting.evening':   'Boa noite,',
@@ -67,6 +73,121 @@ function refreshAccentColor() {
   });
 })();
 
+/* ── Project card marquee (only when text actually overflows) ── */
+(function () {
+  function updateMarquee() {
+    document.querySelectorAll('.project-name, .project-url').forEach((el) => {
+      el.classList.toggle('is-overflowing', el.scrollWidth > el.clientWidth + 1);
+    });
+  }
+
+  updateMarquee();
+  window.addEventListener('resize', updateMarquee);
+})();
+
+/* ── About read-more (mobile only, typewriter reveal) ── */
+(function () {
+  const section = document.getElementById('about');
+  const toggle = section && section.querySelector('.about-toggle');
+  if (!toggle) return;
+
+  const extras = Array.from(section.querySelectorAll('.about-extra'));
+  const TYPE_SPEED = 12;
+  const ERASE_SPEED = 4;
+
+  function typeParagraph(el, text) {
+    return new Promise((resolve) => {
+      el.textContent = '';
+      let i = 0;
+      (function step() {
+        el.textContent = text.slice(0, i);
+        i++;
+        if (i <= text.length) {
+          setTimeout(step, TYPE_SPEED);
+        } else {
+          resolve();
+        }
+      })();
+    });
+  }
+
+  function eraseParagraph(el) {
+    return new Promise((resolve) => {
+      const text = el.textContent;
+      let i = text.length;
+      (function step() {
+        el.textContent = text.slice(0, i);
+        i--;
+        if (i >= 0) {
+          setTimeout(step, ERASE_SPEED);
+        } else {
+          resolve();
+        }
+      })();
+    });
+  }
+
+  async function typeExtras() {
+    const lang = document.documentElement.dataset.lang || 'en';
+    for (const el of extras) {
+      if (el.dataset.typed === 'true' || el.dataset.typing === 'true') continue;
+      el.dataset.typing = 'true';
+      const text = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+      await typeParagraph(el, text);
+      el.dataset.typing = 'false';
+      el.dataset.typed = 'true';
+    }
+  }
+
+  async function eraseExtras() {
+    for (const el of [...extras].reverse()) {
+      if (el.dataset.typed !== 'true') continue;
+      await eraseParagraph(el);
+      el.dataset.typed = 'false';
+    }
+  }
+
+  let animating = false;
+
+  toggle.addEventListener('click', async () => {
+    if (animating) return;
+    animating = true;
+
+    const lang = document.documentElement.dataset.lang || 'en';
+    const isExpanded = section.classList.contains('expanded');
+
+    if (!isExpanded) {
+      section.classList.add('expanded');
+      toggle.dataset.i18n = 'about.showLess';
+      toggle.textContent = TRANSLATIONS[lang]['about.showLess'];
+      await typeExtras();
+    } else {
+      toggle.dataset.i18n = 'about.readMore';
+      toggle.textContent = TRANSLATIONS[lang]['about.readMore'];
+      await eraseExtras();
+      section.classList.remove('expanded');
+    }
+
+    animating = false;
+  });
+})();
+
+/* ── Random color on logo hover ── */
+(function () {
+  const COLOR_NAMES = ['blue', 'yellow', 'orange', 'green', 'purple'];
+
+  document.querySelectorAll('.nav-logo, .footer-logo').forEach((logo) => {
+    logo.addEventListener('mouseenter', () => {
+      const randomColor = COLOR_NAMES[Math.floor(Math.random() * COLOR_NAMES.length)];
+      logo.style.color = `var(--${randomColor})`;
+    });
+
+    logo.addEventListener('mouseleave', () => {
+      logo.style.color = '';
+    });
+  });
+})();
+
 /* ── Greeting ── */
 function updateGreeting() {
   const h    = new Date().getHours();
@@ -94,6 +215,14 @@ function updateGreeting() {
 
     document.querySelectorAll('[data-en][data-pt]').forEach(el => {
       el.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+    });
+
+    document.querySelectorAll('[data-href-en][data-href-pt]').forEach(el => {
+      el.href = lang === 'pt' ? el.dataset.hrefPt : el.dataset.hrefEn;
+    });
+
+    document.querySelectorAll('[data-download-en][data-download-pt]').forEach(el => {
+      el.download = lang === 'pt' ? el.dataset.downloadPt : el.dataset.downloadEn;
     });
 
     updateGreeting();

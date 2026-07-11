@@ -1,0 +1,115 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm} % Margens da página
+\setcounter{secnumdepth}{0}                                 % Remove numeração de seção
+\setlist[itemize]{
+    leftmargin=0.75em, % Recuo da lista (mais perto da margem da página)
+    itemsep=0.2em,     % Espaço entre itens
+    topsep=0.25em,     % Espaço antes/depois da lista
+    parsep=0em,        % Espaço entre parágrafos no mesmo item
+    partopsep=0em      % Espaço extra ao iniciar a lista
+}
+
+\pagestyle{empty}
+
+\hypersetup{
+    pdftitle={CV Kevin Castro},      % Título do PDF
+    pdfauthor={Kevin Castro},        % Autor do PDF
+    colorlinks=true,          % Usa cor nos links (sem caixa)
+    linkcolor=black,          % Cor de links internos
+    urlcolor=black,           % Cor de URLs
+    citecolor=black,          % Cor de citações
+    bookmarksdepth=2          % Barra lateral: seção e subseção
+}
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}
+[\titlerule\vspace{0.5ex}]
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+\titlespacing*{\subsection}{0pt}{0.35em}{0.15em}
+
+\newcounter{cventry}
+\newcommand{\cventry}[4]{%
+    \refstepcounter{cventry}%
+    \phantomsection%
+    \pdfbookmark[2]{#1}{cventry-\thecventry}%
+    \noindent\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Kevin Castro}}
+    \\ [0.1cm]
+    {\normalsize Desenvolvedor Mobile}
+    \\ [0.1cm]
+    São Paulo, Brasil
+    {\textbullet}
+    \href{mailto:kevingcm.dev@gmail.com}{kevingcm.dev@gmail.com}
+    {\textbullet}
+    \href{https://linkedin.com/in/kevingcm}{linkedin.com/in/kevingcm}
+    {\textbullet}
+    \href{https://github.com/kevingcm}{github.com/kevingcm}
+\end{center}
+
+\section{Habilidades Técnicas}
+    \begin{itemize}
+        \item \textbf{Idiomas:} Português (Nativo), Inglês (C1)
+        \item \textbf{Soft Skills:} Trabalho em equipe, Resolução de problemas, Atenção aos detalhes, Aprendizagem rápida, Gestão de tempo, Comunicação
+        \item \textbf{Linguagens de Programação:} Dart, Python, JavaScript, HTML, CSS, Kotlin, Swift
+        \item \textbf{Frameworks:} Flutter
+        \item \textbf{Ferramentas:} Git, GitHub, PostgreSQL, Visual Studio Code, Figma
+    \end{itemize}
+
+\section{Educação}
+    \cventry{Instituto Federal de Rondônia}{Porto Velho, Brasil}{Técnico em Informática}{2021 - 2023}
+    \begin{itemize}
+        \item \textbf{Disciplinas relevantes:} HTML \& CSS, Python, JavaScript, Git \& GitHub, Programação Orientada a Objetos, Banco de Dados Relacional \& SQL
+    \end{itemize}
+
+\section{Experiência}
+    \cventry{Kmon! Climb Club, App de Escalada}{Projeto Pessoal}{Arquitetura full-stack \& produto}{Abr 2026 - Presente}
+    \begin{itemize}
+        \item Projetei e desenvolvi do zero um app completo com Flutter + Supabase, gerenciando mais de 50 migrações de banco de dados e definindo toda a arquitetura de dados.
+        \item Implementei Row-Level Security (RLS) completo no PostgreSQL, políticas de acesso por tabela e controle de privacidade em três níveis.
+        \item Construí um grafo social completo, com sistema de seguidores, feed de atividades, check-ins com fotos e curtidas e comentários.
+        \item Desenvolvi busca com debounce de 250ms, filtros combinados e integração com Google Maps para exibir locais próximos.
+    \end{itemize}
+
+    \cventry{Instituto Federal de Rondônia}{Porto Velho, Brasil}{Monitoria de Programação Orientada a Objetos}{Mar 2023 - Out 2023}
+    \begin{itemize}
+        \item Ofereci suporte online diário aos alunos com conceitos e exercícios de programação em Python, todos os 7 dias da semana.
+        \item Realizei sessões de reforço presenciais duas vezes por semana focadas na resolução de exercícios e desenvolvimento de lógica de programação.
+        \item Apoiei o professor na revisão de atividades e trabalhos, contribuindo para a padronização e qualidade das avaliações.
+    \end{itemize}
+
+\end{document}

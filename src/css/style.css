@@ -106,6 +106,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -149,6 +150,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.02em;
   flex-shrink: 0;
   white-space: nowrap;
+  transition: color 0.15s;
 }
 
 .nav-links {
@@ -159,12 +161,17 @@ img { display: block; max-width: 100%; }
 .nav-links a {
   font-size: 0.875rem;
   color: var(--muted);
-  transition: color 0.15s;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: color 0.15s, background-size 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--text);
+  background-size: 100% 1px;
 }
 
 /* ── Nav actions (lang + theme) ── */
@@ -235,6 +242,44 @@ section[id] { scroll-margin-top: 68px; }
   line-height: 1.4;
   color: var(--accent);
   border-left: 3px solid currentColor;
+}
+
+/* ── Section header (title + inline action) ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.section-header .section-title {
+  margin-bottom: 0;
+}
+
+/* ── Download button ── */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.btn-download:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 /* ── Hero ── */
@@ -353,6 +398,24 @@ section[id] { scroll-margin-top: 68px; }
 }
 
 .body-text:last-child { margin-bottom: 0; }
+
+.about-toggle {
+  display: none;
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.2s ease;
+}
+
+.about-toggle:hover { background-size: 100% 1px; }
 
 .section .card + .card {
   margin-top: 1rem;
@@ -500,8 +563,8 @@ section[id] { scroll-margin-top: 68px; }
 }
 
 @keyframes text-marquee {
-  0%, 15%  { transform: translateX(0); }
-  55%, 70% { transform: translateX(-55%); }
+  0%, 20%  { transform: translateX(0); }
+  50%, 70% { transform: translateX(-55%); }
   100%     { transform: translateX(0); }
 }
 
@@ -635,6 +698,7 @@ section[id] { scroll-margin-top: 68px; }
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 [data-theme="light"] .project-card {
@@ -766,6 +830,7 @@ section[id] { scroll-margin-top: 68px; }
   color: var(--text);
   letter-spacing: 0.02em;
   white-space: nowrap;
+  transition: color 0.15s;
 }
 
 .footer-links {
@@ -822,6 +887,10 @@ section[id] { scroll-margin-top: 68px; }
 
   .page { padding: 80px 1.25rem 70px; gap: 3rem; }
 
+  .about-extra { display: none; }
+  #about.expanded .about-extra { display: block; }
+  .about-toggle { display: inline-block; margin-top: 0.5rem; }
+
   .projects-grid { grid-template-columns: 1fr 1fr; }
 
   .stack-grid { grid-template-columns: repeat(4, 1fr); }
@@ -829,8 +898,6 @@ section[id] { scroll-margin-top: 68px; }
 
 /* ── 425px — Mobile L ── */
 @media (max-width: 425px) {
-  body { overflow-x: hidden; }
-
   .footer-top { justify-content: center; }
 
   .project-title-group { overflow: hidden; }
@@ -841,10 +908,14 @@ section[id] { scroll-margin-top: 68px; }
     text-overflow: clip;
     white-space: nowrap;
     display: inline-block;
-    animation: text-marquee 7s ease-in-out infinite;
   }
 
-  .project-url { animation-delay: 0.3s; }
+  .project-name.is-overflowing,
+  .project-url.is-overflowing {
+    animation: text-marquee 8s ease-in-out infinite;
+  }
+
+  .project-url.is-overflowing { animation-delay: 0.3s; }
 
   .page { padding: 74px 1rem 60px; gap: 2.5rem; }
 
